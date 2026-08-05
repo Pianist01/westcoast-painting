@@ -129,4 +129,82 @@ main {
   grid-row: 2;
   grid-column: 1/2;
   display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 3.2rem;
+  padding-bottom: 25px;
+}
+
+.service-card {
+  flex: 1 1 300px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: auto auto auto;
+  gap: 15px;
+}
+
+.service-card:nth-child(1) {
+  padding-top: 15px;
+}
+
+.service-card img {
+  width: 250px;
+  height: 250px;
+  justify-self: center;
+  align-self: center;
+  grid-row: 1/2;
+  grid-column: 1/2;
+  border-radius: 15px;
+}
+
+.service-title {
+  text-align: center;
+  grid-row: 2/3;
+  grid-column: 1/2;
+}
+
+.service-card button {
+  width: 100px;
+  height: 30px;
+  align-self: center;
+  grid-row: 3/4;
+  grid-column: 1/2;
+  justify-self: center;
+}
+
+/* FOOTER */
+
+footer {
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer p {
+  color: white;
+}
+
+footer ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 15px;
+  padding: 0;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  margin: 0;
+}
+
+footer a {
+  color: white;
+}
+
+footer .company-title, .company-copyright {
+  text-align: center;
+}
+
+footer .company-title {
+  margin-top: 10px;
 }
