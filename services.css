@@ -172,6 +172,20 @@ main {
   justify-self: center;
 }
 
+/* POPUP */
+
+.popup-container {
+  width: 0;
+  min-height: 250px;
+  background-color: #ffffff;
+  z-index: 10;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: width .8s ease-in ;
+}
+
 /* FOOTER */
 
 footer {
