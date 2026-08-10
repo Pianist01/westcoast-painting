@@ -20,19 +20,36 @@ function createPopUp() {
                 requestAnimationFrame(animate);
             }
             requestAnimationFrame(animate);
+
+
             function createContent() {
                 const service = serviceDescription[index];
                 const unorderedList = document.createElement('ul');
-                const whyUsSection = document.createElement('h2');
-                const benefitsSection = document.createElement('h2');
-                const whereWeServeSection = document.createElement('h2');
-                const typesOfSurfacesSection = document.createElement('h2');
+                const benefitsUnorderedList = document.createElement('ul');
+                const locationsUnorderedList = document.createElement('ul');
+                const surfacesUnorderedList = document.createElement('ul');
+                const whyUsSection = document.createElement('h3');
+                whyUsSection.classList.add('why-us');
+                const benefitsSection = document.createElement('h3');
+                benefitsSection.classList.add('benefits');
+                const whereWeServeSection = document.createElement('h3');
+                whereWeServeSection.classList.add('locations');
+                const typesOfSurfacesSection = document.createElement('h3');
+                typesOfSurfacesSection.classList.add('surfaces');
+                const whatWeOfferSection = document.createElement('h3');
+                whatWeOfferSection.classList.add('what-we-offer');
+                whatWeOfferSection.textContent = 'What We Offer';
                 typesOfSurfacesSection.textContent = 'Types of Surfaces';
                 whereWeServeSection.textContent = 'Where We Serve';
                 benefitsSection.textContent = 'Benefits';
                 whyUsSection.textContent = 'Why Us?';
+                const whatWeSpecializeSection = document.createElement('h3');
+                whatWeSpecializeSection.classList.add('specialize');
+                whatWeSpecializeSection.textContent = 'What We Specialize In';
                 const contentContainer = document.createElement('div');
                 contentContainer.classList.add('content-container');
+                const exitPopUp = document.createElement('div');
+                exitPopUp.classList.add('exit');
                 const title = document.createElement('h2');
                 title.classList.add('content-title');
                 title.textContent = service.title;
@@ -40,13 +57,32 @@ function createPopUp() {
                 description.textContent = service.description;
                 description.classList.add('content-description');
 
+                contentContainer.append(exitPopUp);
+
+                exitPopUp.addEventListener('click', (e) => {
+                    console.log('exit clicked');
+                });
+
+                // function closePopUp(){
+                //     exitPopUp.addEventListener('click', (e) => {
+                //         console.log('exit clicked');
+                //         function closeAnimation() {
+                //             popUpContainer.style.width = '0px';
+                //             requestAnimationFrame(closeAnimation);
+                //         }
+                //         requestAnimationFrame(closeAnimation);
+                //     });
+                // }
+
+                // closePopUp();
+
                 if(service.list) {
                     service.list.forEach((item) => {
                         const listItem = document.createElement('li');
-                        listItem.textContent = item;
+                        listItem.textContent = item.service;
                         unorderedList.append(listItem);
                     });
-                    contentContainer.append(unorderedList);
+                    contentContainer.append(whatWeOfferSection, unorderedList);
                 }; 
                 if(service.specializedIn) {
                     service.specializedIn.forEach((item) => {
@@ -58,7 +94,7 @@ function createPopUp() {
                         listItem.append(listLabel, listDescription);
                         unorderedList.append(listItem);
                     });
-                    contentContainer.append(unorderedList);
+                    contentContainer.append(whatWeSpecializeSection, unorderedList);
                 };
                 if(service.whyUs) {
                     service.whyUs.forEach((item) => {
@@ -80,9 +116,9 @@ function createPopUp() {
                         const listDescription = document.createElement('p');
                         listDescription.textContent = item.description;
                         listItem.append(listLabel, listDescription);
-                        unorderedList.append(listItem);
+                        benefitsUnorderedList.append(listItem);
                     });
-                    contentContainer.append(benefitsSection, unorderedList);
+                    contentContainer.append(benefitsSection, benefitsUnorderedList);
                 }
                 if(service.whereWeServe) {
                     service.whereWeServe.forEach((item) => {
@@ -92,9 +128,9 @@ function createPopUp() {
                         const listDescription = document.createElement('p');
                         listDescription.textContent = item.description;
                         listItem.append(listLabel, listDescription);
-                        unorderedList.append(listItem);
+                        locationsUnorderedList.append(listItem);
                     });
-                    contentContainer.append(whereWeServeSection, unorderedList);
+                    contentContainer.append(whereWeServeSection, locationsUnorderedList);
                 }
                 if(service.typesOfSurfaces) {
                     service.typesOfSurfaces.forEach((item) => {
@@ -104,9 +140,9 @@ function createPopUp() {
                         const listDescription = document.createElement('p');
                         listDescription.textContent = item.description;
                         listItem.append(listLabel, listDescription);
-                        unorderedList.append(listItem);
+                        surfacesUnorderedList.append(listItem);
                     });
-                    contentContainer.append(typesOfSurfacesSection, unorderedList);
+                    contentContainer.append(typesOfSurfacesSection, surfacesUnorderedList);
                 }
 
                 contentContainer.append(title, description);
@@ -126,7 +162,26 @@ const serviceDescription = [
         id: 1,
         title: 'Residential Interior',
         description: `Refresh your home's interior with professional painting services designed to enhace the beauty and comfort of every room. We carefully prepare all surfaces, protect your furniture and flooring, and apply premium-quality paints to achieve a smooth, long-lasting finish that you will enjoy for years to come.`,
-        list: ['Wall Painting', 'Ceiling Painting', 'Trim and molding painting', 'Cabinet Refinishing', 'Wallpaper Removal', 'Color Consultations']
+        list: [
+            {
+                service: 'Wall Painting'
+            },
+            {
+                service: 'Ceiling Painting'
+            },
+            {
+                service: 'Trim and Molding Painting'
+            },
+            {
+                service: 'Cabinet Refinishing'
+            },
+            {
+                service: 'Wallpaper Removal'
+            },
+            {
+                service: 'Color Consultations'
+            }
+        ]
     },
     {
         id: 2,
