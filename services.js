@@ -5,6 +5,9 @@ const serviceContainer = document.querySelector('.service-container');
 let index = 0;
 let btnNum = 0;
 const serviceCard = document.querySelectorAll('.service-card');
+const html = document.querySelector('html');
+const heroSection = body.querySelector('.hero-section');
+const footer = body.querySelector('footer');
 console.log(serviceCard);
 
 function createPopUp() {
@@ -17,6 +20,10 @@ function createPopUp() {
             popUpContainer.classList.add('popup-container');
             function animate(){
                 popUpContainer.style.width = '300px';
+                html.style.backgroundColor = 'black';
+                heroSection.style.opacity = '0';
+                footer.style.opacity = '0';
+                serviceContainer.style.opacity = '0';
                 requestAnimationFrame(animate);
             }
             requestAnimationFrame(animate);
@@ -59,22 +66,22 @@ function createPopUp() {
 
                 contentContainer.append(exitPopUp);
 
-                exitPopUp.addEventListener('click', (e) => {
-                    console.log('exit clicked');
-                });
+                function closePopUp(){
+                    exitPopUp.addEventListener('click', (e) => {
+                        console.log('exit clicked');
+                        function closeAnimation() {
+                            popUpContainer.style.width = '0px';
+                            html.style.backgroundColor = '#ffffff';
+                            heroSection.style.opacity = '100';
+                            footer.style.opacity = '100';
+                            serviceContainer.style.opacity = '100';
+                            requestAnimationFrame(closeAnimation);
+                        }
+                        requestAnimationFrame(closeAnimation);
+                    });
+                }
 
-                // function closePopUp(){
-                //     exitPopUp.addEventListener('click', (e) => {
-                //         console.log('exit clicked');
-                //         function closeAnimation() {
-                //             popUpContainer.style.width = '0px';
-                //             requestAnimationFrame(closeAnimation);
-                //         }
-                //         requestAnimationFrame(closeAnimation);
-                //     });
-                // }
-
-                // closePopUp();
+                closePopUp();
 
                 if(service.list) {
                     service.list.forEach((item) => {
