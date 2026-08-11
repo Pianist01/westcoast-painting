@@ -108,7 +108,7 @@ body {
   text-align: center;
 }
 
-/* Main */
+/* MAIN */
 
 main {
   grid-row: 2;
@@ -116,4 +116,38 @@ main {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
   grid-template-rows: auto auto;
+}
+
+/* TIMELINE */
+
+.timeline-item {
+  min-height: 100svh;
+  display: grid;
+  grid-template-columns: .5fr 1fr;
+  grid-template-rows: 1fr;
+}
+
+.timeline-item h2 {
+  grid-row: 1;
+  grid-column: 1/2;
+  justify-self: center;
+  text-align: center;
+  padding-top: 10px;
+}
+
+.timeline-item h3 {
+  grid-row: 1;
+  grid-column: 2/3;
+  justify-self: center;
+  padding-top: 10px;
+  opacity: 0;
+  transition: opacity .5s ease-in;
+}
+
+.timeline-item p {
+  grid-row: 1;
+  grid-column: 2/3;
+  align-self: center;
+  text-align: center;
+  line-height: 2;
 }
