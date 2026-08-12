@@ -2,22 +2,21 @@ console.log('This Works');
 
 const timeLineItems = document.querySelectorAll('.timeline-item');
 const options = {
-    threshold: 0.5
-}
+    threshold: 0.2
+};
 
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         if(entry.isIntersecting) {
             console.log(entry.target, entry.isIntersecting, entry.intersectionRatio);
-            function animate() {
-                const yearTitle = document.querySelectorAll('h3');
-                yearTitle.forEach((year) => {
-                    year.style.opacity = '100';
-                    requestAnimationFrame(animate);
-                });
-                requestAnimationFrame(animate);
-            }
-            requestAnimationFrame(animate);
+            const yearTitle = entry.target.querySelector('h3');
+            yearTitle.style.opacity = '1';
+            yearTitle.classList.add('active');
+            const yearDescription = entry.target.querySelector('p');
+            yearDescription.style.opacity = '1';
+            yearDescription.classList.add('active');
+        } else {
+            entry.target.classList.remove('active');
         }
     });
 }, options);
