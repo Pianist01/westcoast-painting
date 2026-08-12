@@ -15,8 +15,13 @@ const observer = new IntersectionObserver((entries) => {
             const yearDescription = entry.target.querySelector('p');
             yearDescription.style.opacity = '1';
             yearDescription.classList.add('active');
+            const yearCircle = entry.target.querySelector('.circle');
+            yearCircle.style.backgroundColor = '#333333';
+            const rectOne = entry.target.querySelector('.rectOne');
+            rectOne.style.backgroundColor = '#333333';
         } else {
-            entry.target.classList.remove('active');
+            entry.target.querySelector('h3').style.opacity = '0';
+            entry.target.querySelector('p').style.opacity = '0';
         }
     });
 }, options);
