@@ -161,7 +161,7 @@ main {
   justify-self: center;
   line-height: 2;
   opacity: 0;
-  transition: opacity 1s ease-in;
+  transition: opacity .5s ease-in;
   padding: 15px;
 }
 
@@ -194,7 +194,8 @@ main {
   align-items: center;
   background-color: #d9d9d9;
   width: 7px;
-  height: 80%;
+  height: 150px;
+  transition: background-color .3s ease-in;
 }
 
 .circle {
@@ -220,4 +221,5 @@ main {
   height: 15px;
   border-radius: 15px;
   background-color: #d9d9d9;
+  transition: background-color .3s ease-in;
 }
