@@ -17,45 +17,47 @@ const circleTwoOptions = {
 }
 
 let previousScrollY = window.scrollY;
+let scrollingUp;
+let scrollDirection;
+
+window.addEventListener('scroll', () => {
+    const currentScrollY = window.scrollY;
+    if(currentScrollY > previousScrollY) {
+        console.log('Scrolling down');
+        scrollingUp = false; 
+        console.log(scrollingUp);
+        scrollDirection = currentScrollY;
+    } else if(currentScrollY < previousScrollY) {
+        console.log('Scrolling Up');
+        scrollingUp = true;
+        console.log(scrollingUp);
+        scrollDirection = currentScrollY;
+    }
+    previousScrollY = currentScrollY;
+});
+
+
 
 
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
-        window.addEventListener('scroll', () => {
-              const currentScrollY = window.scrollY;  
-
-            //   if(currentScrollY > previousScrollY) {
-            //     console.log('Scrolling Down');
-            //   } else if(currentScrollY < previousScrollY) {
-            //     console.log('Scrolling Up');
-            //   }
 
               
               if(entry.isIntersecting) {
-                console.log('intersecting', entry.isIntersecting);
-                console.log('current:', currentScrollY);
-                console.log('previous:', previousScrollY);
-                console.log('direction check:', currentScrollY > previousScrollY);
-
-                if(currentScrollY > previousScrollY) {
-                    // console.log('Scrolling Down');
-                    // const yearTitle = entry.target.querySelector('h3');
-                    // yearTitle.style.opacity = '1';
-                    // yearTitle.classList.add('active');
-                    // const yearDescription = entry.target.querySelector('p');
-                    // yearDescription.style.opacity = '1';
-                    // yearDescription.classList.add('active');
+                if(scrollingUp === false) {
+                    const yearTitle = entry.target.querySelector('h3');
+                    yearTitle.style.opacity = '1';
+                    yearTitle.classList.add('active');
+                    const yearDescription = entry.target.querySelector('p');
+                    yearDescription.style.opacity = '1';
+                    yearDescription.classList.add('active');
                 }
             } else {
-                if(currentScrollY < previousScrollY) {
-                    console.log(Up);
+                if(scrollingUp === true) {
+                    entry.target.querySelector('h3').style.opacity = '0';
+                    entry.target.querySelector('p').style.opacity = '0';
                 }
-                entry.target.querySelector('h3').style.opacity = '0';
-                entry.target.querySelector('p').style.opacity = '0';
         }
-        previousScrollY = currentScrollY;
-
-            });
     });
 }, options);
 
