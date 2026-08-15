@@ -15,7 +15,6 @@ const observer = new IntersectionObserver((entries) => {
                     year.style.opacity = '100';
                     requestAnimationFrame(animate);
                 });
-                requestAnimationFrame(animate);
             }
             requestAnimationFrame(animate);
         }
