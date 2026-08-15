@@ -123,7 +123,7 @@ main {
 .timeline-item {
   min-height: 100svh;
   display: grid;
-  grid-template-columns: .5fr 1fr;
+  grid-template-columns: .3fr 1fr;
   grid-template-rows: 1fr;
 }
 
@@ -144,10 +144,82 @@ main {
   transition: opacity .5s ease-in;
 }
 
+@keyframes goUp {
+  from {
+    transform: translateY(60px);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
 .timeline-item p {
   grid-row: 1;
   grid-column: 2/3;
   align-self: center;
-  text-align: center;
+  justify-self: center;
   line-height: 2;
+  opacity: 0;
+  transition: opacity .5s ease-in;
+  padding: 15px;
+}
+
+.active {
+  animation: goUp 1s ease-in-out;
+}
+
+.inactive {
+  opacity: 0;
+}
+
+.rectangle {
+  grid-row: 1/2;
+  grid-column: 1/2;
+  align-self: center;
+  justify-self: center;
+  justify-items: center;
+  align-items: center;
+  width: 100%;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  height: 80svh;
+  margin-top: 10px;
+}
+
+.rectOne, .rectTwo, .rectThree, .rectFour {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #d9d9d9;
+  width: 7px;
+  height: 150px;
+  transition: background-color .3s ease-in;
+}
+
+.circle {
+  grid-row: 1/2;
+  grid-column: 1/2;
+  align-self: start;
+  justify-self: center;
+  margin-top: 60px;
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  background-color: #d9d9d9;
+  transition: background-color .3s ease-in;
+}
+
+.circleTwo {
+  grid-row: 1/2;
+  grid-column: 1/2;
+  align-self: end;
+  justify-self: center;
+  margin-bottom: 50px;
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  background-color: #d9d9d9;
+  transition: background-color .3s ease-in;
 }
