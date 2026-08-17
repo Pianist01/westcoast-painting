@@ -118,6 +118,72 @@ main {
   grid-template-rows: auto auto;
 }
 
+/* CONTACT FORM */
+
+.contact-box {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: .5fr 1fr;
+}
+
+.contact-box h1, p {
+  grid-row: 1/2;
+  grid-column: 1/2;
+}
+
+.contact-box h1 {
+  justify-self: center;
+  align-self: start;
+}
+
+.contact-box p {
+  justify-self: center;
+  align-self: center;
+  text-align: center;
+  margin-top: 12px;
+}
+
+#contact-form {
+  grid-row: 2/3;
+  grid-column: 1/2;
+  display: grid;
+  grid-template-rows: repeat(4, .7fr) 1.5fr;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.form-row1 {
+  grid-row: 1/2;
+  grid-column: 1/2;
+}
+
+.form-row2 {
+  grid-row: 1/2;
+  grid-column: 2/3;
+}
+
+.form-row3 {
+  grid-row: 2/3;
+  grid-column: 1/-1;
+}
+
+.form-row4 {
+  grid-row: 3/4;
+  grid-column: 1/-1;
+}
+
+.form-row5 {
+  grid-row: 4/5;
+  grid-column: 1/-1;
+  align-self: start;
+}
+
+.interested-services-container {
+  grid-row: 4/5;
+  grid-column: 1/2;
+  align-self: end;
+}
+
+
 /* FOOTER */
 
 footer {
