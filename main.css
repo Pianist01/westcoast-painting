@@ -222,6 +222,8 @@ main {
 }
 
 .scroll-container img {
+  min-width: 228px;
+  min-height: 220px;
   width: 228px;
   height: 220px;
   flex: 0 0 auto;
@@ -356,5 +358,120 @@ footer .company-title {
 
   .our-work h3 {
     font-size: 1.7rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  header a {
+    font-size: 1.6rem;
+  }
+
+  .hero-content h1 {
+    font-size: 2.4rem;
+  }
+
+  .hero-content p {
+    font-size: 1.6rem;
+  }
+
+  .hero-content .hero-btn {
+    font-size: 1.4rem;
+    width: 220px;
+  }
+
+  .about-short h2 {
+    font-size: 1.8rem;
+  }
+
+  .about-short p {
+    font-size: 1.5rem;
+  }
+
+  .why-us h2 {
+    font-size: 1.8rem;
+  }
+
+  .why-us .why-us-short {
+    font-size: 1.5rem;
+  }
+
+  .why-us li h3 {
+    font-size: 1.5rem;
+  }
+
+  .why-us li p {
+    font-size: 1.4rem;
+  }
+
+  .our-work h3 {
+    font-size: 1.8rem;
+  }
+
+  footer p {
+    font-size: 1.4rem;
+  }
+
+  footer li a {
+    font-size: 1.4rem;
+  }
+}
+
+@media (min-width: 1920px) {
+  header a {
+    font-size: 2rem; 
+  }
+
+  .hero-section h1 {
+    font-size: 3rem;
+  }
+
+  .hero-section p {
+    font-size: 2rem;
+  }
+
+  .hero-section .hero-btn {
+    font-size: 1.7rem;
+    width: 280px;
+    height: 65px;
+  }
+
+  .about-short h2 {
+    font-size: 2.2rem;
+  }
+
+  .about-short p {
+    font-size: 1.8rem;
+  }
+
+  .why-us h2 {
+    font-size: 2.2rem;
+  }
+
+  .why-us .why-us-short {
+    font-size: 1.8rem;
+  }
+
+  .why-us li h3 {
+    font-size: 2rem;
+  }
+
+  .why-us li p {
+    font-size: 1.8rem;
+  }
+
+  .our-work h3 {
+    font-size: 2.2rem;
+  }
+
+  .scroll-container img {
+    width: 420px;
+  }
+
+  footer p {
+    font-size: 1.6rem;
+  }
+
+  footer li a {
+    font-size: 1.6rem;
   }
 }
