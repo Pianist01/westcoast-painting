@@ -124,25 +124,20 @@ main {
 .contact-box {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
-  grid-template-rows: .5fr 1fr;
+  grid-template-rows: auto auto;
   min-height: 100svh;
 }
 
-.contact-box h1, p {
+.contact-head {
   grid-row: 1/2;
   grid-column: 1/2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.contact-box h1 {
-  justify-self: center;
-  align-self: start;
-}
-
-.contact-box p {
-  justify-self: center;
-  align-self: center;
+.contact-head p {
   text-align: center;
-  margin-top: 12px;
 }
 
 .form-container {
@@ -150,10 +145,11 @@ main {
   align-self: end;
   width: 300px;
   height: 100svh;
-  background-color: #333333;
+  background-color: #f1f4f6;
   border-radius: 15px;
   justify-self: center;
   margin-bottom: 20px;
+  margin-top: 20px;
 }
 
 #contact-form {
@@ -163,7 +159,8 @@ main {
   grid-template-rows: repeat(3, .7fr) 1fr;
   grid-template-columns: repeat(2, 1fr);
   height: 100%;
-  padding-top: 25px;
+  width: 100%;
+  padding-top: 50px;
 }
 
 .form-row1 {
@@ -179,7 +176,7 @@ main {
   grid-row: 1/2;
   grid-column: 1/-1;
   align-self: start;
-  color: white;
+  color: black;
 }
 
 .form-row1 input {
@@ -204,7 +201,7 @@ main {
   grid-row: 1/2;
   grid-column: 1/-1;
   align-self: start;
-  color: white;
+  color: black;
 }
 
 .form-row2 input {
@@ -215,9 +212,9 @@ main {
 }
 
 .form-row3 {
-  grid-row: 2/3;
+  grid-row: 1/3;
   grid-column: 1/-1;
-  align-self: start;
+  align-self: center;
   justify-self: center;
   display: grid;
   grid-template-rows: .5fr;
@@ -228,7 +225,7 @@ main {
   grid-row: 1/2;
   grid-column: 1/-1;
   align-self: start;
-  color: white;
+  color: black;
 }
 
 .form-row3 input {
@@ -243,6 +240,7 @@ main {
   grid-column: 1/-1;
   align-self: center;
   justify-self: center;
+  margin-bottom: 30px;
   display: grid;
   grid-template-rows: .5fr;
   grid-template-columns: minmax(0, 1fr);
@@ -252,7 +250,7 @@ main {
   grid-row: 1/2;
   grid-column: 1/-1;
   align-self: start;
-  color: white;
+  color: black;
 }
 
 .form-row4 input {
@@ -270,13 +268,14 @@ main {
   display: grid;
   grid-template-rows: .5fr;
   grid-template-columns: minmax(0, 1fr);
+  margin-top: 50px;
 }
 
 .form-row5 label {
   grid-row: 1/2;
   grid-column: 1/-1;
   align-self: start;
-  color: white;
+  color: black;
 }
 
 .form-row5 textarea {
@@ -284,6 +283,10 @@ main {
   grid-column: 1/-1;
   align-self: start;
   margin-top: 30px;
+  width: 100%;
+  min-height: 140px;
+  resize: horizontal;
+  box-sizing: border-box;
 }
 
 .interested-services-container {
@@ -291,19 +294,113 @@ main {
   grid-column: 1/-1;
   align-self: center;
   justify-self: center;
+  display: grid;
+  grid-template-rows: repeat(4, auto);
+  grid-template-columns: repeat(2, 1fr);
+  width: 280px;
+  margin-bottom: 70px;
 }
 
 .interested-services-container label {
-  color: white;
+  color: black;
+  font-size: 14px;
+}
+
+.services-title {
+  grid-row: 1/2;
+  align-self: center;
+  justify-self: start;
+}
+
+#residential-int {
+  grid-row: 2/3;
+  grid-column: 1/2;
+  align-self: center;
+  justify-self: start;
+}
+
+.residential-int-label {
+  grid-row: 2/3;
+  grid-column: 1/2;
+  align-self: center;
+  justify-self: center;
+}
+
+#residential-ext {
+  grid-row: 3/4;
+  grid-column: 1/2;
+  align-self: center;
+  justify-self: start;
+}
+
+.residential-ext-label {
+  grid-row: 3/4;
+  grid-column: 1/2;
+  align-self: center;
+  justify-self: center;
+  margin-left: 5px;
+}
+
+#commercial-int {
+  grid-row: 4/5;
+  grid-column: 1/2;
+  align-self: center;
+  justify-self: start;
+}
+
+.commercial-int-label {
+  grid-row: 4/5;
+  grid-column: 1/2;
+  align-self: center;
+  justify-self: center;
+  margin-left: 5px;
+}
+
+#commercial-ext {
+  grid-row: 2/3;
+  grid-column: 2/3;
+  align-self: center;
+  justify-self: start;
+}
+
+.commercial-ext-label {
+  grid-row: 2/3;
+  grid-column: 2/3;
+  align-self: center;
+  justify-self: center;
+  margin-left: 10px;
+}
+
+#stains {
+  grid-row: 3/4;
+  grid-column: 2/3;
+  align-self: center;
+  justify-self: start;
+}
+
+.stains-label {
+  grid-row: 3/4;
+  grid-column: 2/3;
+  align-self: center;
+  justify-self: start;
+  margin-left: 17px;
 }
 
 button {
-  width: 200px;
-  height: 50px;
+  width: 250px;
+  height: 40px;
   grid-row: 4/5;
   grid-column: 1/-1;
   align-self: center;
   justify-self: center;
+  background-color: #252525;
+  color: white;
+  border-radius: 10px;
+}
+
+button:hover {
+  background-color: #3d3d3d;
+  cursor: pointer;
 }
 
 
