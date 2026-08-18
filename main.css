@@ -266,3 +266,95 @@ footer .company-title, .company-copyright {
 footer .company-title {
   margin-top: 10px;
 }
+
+/* MEDIA QUERIES */
+
+@media (min-width: 1024px) {
+  header a {
+    font-size: 1.3rem;
+  }
+
+  .hero-content p {
+    font-size: 1.3rem;
+  }
+
+  .hero-content .hero-btn {
+    font-size: 1.1rem;
+    width: 170px;
+    height: 40px;
+    margin-top: 10px;
+    border-radius: 5px;
+  }
+
+  .about-short h2 {
+    font-size: 1.5rem;
+  }
+
+  .about-short p {
+    font-size: 1.2rem;
+  }
+
+  .why-us h2 {
+    font-size: 1.5rem;
+  }
+
+  .why-us .why-us-short {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .why-us li p {
+    font-size: 1.1rem;
+  }
+
+  .our-work h3 {
+    font-size: 1.5rem;
+  }
+
+  footer p {
+    font-size: 1.2rem;
+  }
+
+  footer li a {
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  header a {
+    font-size: 1.4rem;
+  }
+
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-content p {
+    font-size: 1.5rem;
+  }
+
+  .hero-content .hero-btn {
+    font-size: 1.2rem;
+    width: 200px;
+  }
+
+  .about-short h2 {
+    font-size: 1.6rem;
+  }
+
+  .about-short p {
+    font-size: 1.4rem;
+  }
+
+  .why-us .why-us-short {
+    font-size: 1.4rem;
+  }
+
+  .why-us li p {
+    font-size: 1.3rem;
+  }
+
+  .our-work h3 {
+    font-size: 1.7rem;
+  }
+}
