@@ -20,11 +20,13 @@ function createPopUp() {
             popUpContainer.classList.add('popup-container');
             function animate(){
                 popUpContainer.style.width = '300px';
+                if(window.innerWidth >= 1279) {
+                    popUpContainer.style.width = '500px';
+                }
                 html.style.backgroundColor = 'black';
                 heroSection.style.opacity = '0';
                 footer.style.opacity = '0';
                 serviceContainer.style.opacity = '0';
-                requestAnimationFrame(animate);
             }
             requestAnimationFrame(animate);
 
@@ -72,10 +74,9 @@ function createPopUp() {
                         function closeAnimation() {
                             popUpContainer.style.width = '0px';
                             html.style.backgroundColor = '#ffffff';
-                            heroSection.style.opacity = '100';
-                            footer.style.opacity = '100';
-                            serviceContainer.style.opacity = '100';
-                            requestAnimationFrame(closeAnimation);
+                            heroSection.style.opacity = '1';
+                            footer.style.opacity = '1';
+                            serviceContainer.style.opacity = '1';
                         }
                         requestAnimationFrame(closeAnimation);
                     });
