@@ -442,3 +442,91 @@ footer .company-title, .company-copyright {
 footer .company-title {
   margin-top: 10px;
 }
+
+/* MEDIA QUERIES */
+
+@media (min-width: 414px) {
+  .form-container {
+    width: 340px;
+  }
+
+  .form-row2 label {
+    margin-top: 12px;
+  }
+
+  .form-row2 input {
+    margin-top: 40px;
+  }
+
+  .interested-services-container {
+    margin-top: 50px;
+  }
+
+  .form-row5 {
+    margin-top: 80px;
+  }
+
+  .form-row4 {
+    margin-top: 25px;
+  }
+
+  .form-row3 {
+    margin-top: 20px;
+  }
+}
+
+@media (min-width: 1024px) {
+  header a {
+    font-size: 1.3rem;
+  }
+
+  .contact-head p {
+    font-size: 1.2rem;
+    text-align: center;
+    width: 80%;
+  }
+
+  .form-container {
+    width: 450px;
+  }
+}
+
+@media (min-width: 1280px) {
+  header a {
+    font-size: 1.4rem;
+  }
+
+  .contact-head p {
+    font-size: 1.4rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  header a {
+    font-size: 1.5rem;
+  }
+
+  .contact-head p {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 1599px) {
+  header a {
+    font-size: 1.7rem;
+  }
+
+  .contact-head p {
+    font-size: 1.7rem;
+  }
+}
+
+@media (min-width: 1920px) {
+  header a {
+    font-size: 2rem;
+  }
+
+  .contact-box p {
+    font-size: 2rem;
+  }
+}
