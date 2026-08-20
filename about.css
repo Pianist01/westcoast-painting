@@ -57,6 +57,23 @@ body {
     display: grid;
     grid-template-columns: minmax(0, 1fr);
     grid-template-rows: auto auto auto;
+    font-family: "Inter", sans-serif;
+}
+
+h1 {
+  font-weight: 700;
+}
+
+h2, h3 {
+  font-weight: 600;
+}
+
+p {
+  font-weight: 400;
+}
+
+button, a {
+  font-weight: 500;
 }
 
 /* HEADER HERO */
@@ -67,7 +84,7 @@ body {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: .3fr 1fr;
-  background: url('img/houseTwo.jpg');
+  background: url('img/about-us.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -90,6 +107,11 @@ body {
   margin-top: 12px;
   padding: 0;
   justify-content: center;
+}
+
+header a {
+  color: white;
+  text-decoration: none;
 }
 
 .hero-content {

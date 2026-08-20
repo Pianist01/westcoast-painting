@@ -57,6 +57,23 @@ body {
     display: grid;
     grid-template-columns: minmax(0, 1fr);
     grid-template-rows: auto auto auto;
+    font-family: "Inter", sans-serif;
+}
+
+h1 {
+  font-weight: 700;
+}
+
+h2, h3 {
+  font-weight: 600;
+}
+
+p {
+  font-weight: 400;
+}
+
+button, a {
+  font-weight: 500;
 }
 
 /* HEADER/HERO */
@@ -67,7 +84,7 @@ body {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: .3fr 1fr;
-  background: url('img/suburbanHome.jpg');
+  background: url('img/homePageHero.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -83,13 +100,18 @@ body {
 }
 
 .hero-section ul {
-  list-style-type: none;
+  list-style-type: none; 
   display: flex;
   gap: 15px;
   color: white;
   margin-top: 12px;
   padding: 0;
   justify-content: center;
+}
+
+header a {
+  color: #fff;
+  text-decoration: none;
 }
 
 .hero-content {
@@ -114,10 +136,11 @@ body {
 .hero-content .hero-btn {
   text-align: center;
   font-size: 12px;
-  width: 120px;
+  width: 150px;
   height: 30px;
   background-color: #ffffff;
   align-content: center;
+  border-radius: 5px;
 }
 
 /* MAIN */
@@ -144,6 +167,7 @@ main {
   justify-self: center;
   margin-bottom: 10px;
   padding-top: 25px;
+  text-align: center;
 }
 
 .about-short p {
@@ -282,7 +306,7 @@ footer .company-title {
 
   .hero-content .hero-btn {
     font-size: 1.1rem;
-    width: 170px;
+    width: 190px;
     height: 40px;
     margin-top: 10px;
     border-radius: 5px;
@@ -376,7 +400,7 @@ footer .company-title {
 
   .hero-content .hero-btn {
     font-size: 1.4rem;
-    width: 220px;
+    width: 250px;
   }
 
   .about-short h2 {
@@ -416,6 +440,12 @@ footer .company-title {
   }
 }
 
+@media (min-width: 1600px) {
+  .scroll-container img {
+    width: 420px;
+  }
+}
+
 @media (min-width: 1920px) {
   header a {
     font-size: 2rem; 
@@ -431,7 +461,7 @@ footer .company-title {
 
   .hero-section .hero-btn {
     font-size: 1.7rem;
-    width: 280px;
+    width: 290px;
     height: 65px;
   }
 

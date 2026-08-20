@@ -20,6 +20,9 @@ function createPopUp() {
             popUpContainer.classList.add('popup-container');
             function animate(){
                 popUpContainer.style.width = '300px';
+                if(window.innerWidth >= 1024) {
+                    popUpContainer.style.width = '360px'
+                }
                 if(window.innerWidth >= 1279) {
                     popUpContainer.style.width = '500px';
                 }
@@ -59,6 +62,7 @@ function createPopUp() {
                 contentContainer.classList.add('content-container');
                 const exitPopUp = document.createElement('div');
                 exitPopUp.classList.add('exit');
+                exitPopUp.textContent = 'x';
                 const title = document.createElement('h2');
                 title.classList.add('content-title');
                 title.textContent = service.title;

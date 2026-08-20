@@ -58,6 +58,23 @@ body {
     grid-template-columns: minmax(0, 1fr);
     grid-template-rows: auto auto auto;
     overflow-x: hidden;
+    font-family: "Inter", sans-serif;
+}
+
+h1 {
+  font-weight: 700;
+}
+
+h2, h3 {
+  font-weight: 600;
+}
+
+p {
+  font-weight: 400;
+}
+
+button, a {
+  font-weight: 500;
 }
 
 /* HEADER HERO */
@@ -68,7 +85,7 @@ body {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: .3fr 1fr;
-  background: url('img/houseFour.jpg');
+  background: url('img/contact-page.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -91,6 +108,11 @@ body {
   margin-top: 12px;
   padding: 0;
   justify-content: center;
+}
+
+header a {
+  color: #fff;
+  text-decoration: none;
 }
 
 .hero-content {
@@ -298,18 +320,20 @@ main {
   grid-template-rows: repeat(4, auto);
   grid-template-columns: repeat(2, 1fr);
   width: 280px;
-  margin-bottom: 70px;
+  margin-bottom: 10px;
 }
 
 .interested-services-container label {
   color: black;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 .services-title {
   grid-row: 1/2;
   align-self: center;
   justify-self: start;
+  font-size: 13px;
+  padding-bottom: 5px;
 }
 
 #residential-int {
@@ -354,6 +378,7 @@ main {
   align-self: center;
   justify-self: center;
   margin-left: 5px;
+  font-size: 12px;
 }
 
 #commercial-ext {
@@ -391,7 +416,8 @@ button {
   height: 40px;
   grid-row: 4/5;
   grid-column: 1/-1;
-  align-self: center;
+  align-self: end;
+  margin-bottom: 30px;
   justify-self: center;
   background-color: #252525;
   color: white;
