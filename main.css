@@ -67,7 +67,7 @@ body {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: .3fr 1fr;
-  background: url('/img/suburbanHome.jpg');
+  background: url('img/suburbanHome.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
