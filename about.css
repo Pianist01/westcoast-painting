@@ -249,6 +249,22 @@ main {
   transition: background-color .3s ease-in;
 }
 
+.legacy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100svh;
+}
+
+.legacy-description {
+  display: flex;
+  flex: 1;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  line-height: 2;
+}
+
 /* FOOTER */
 
 footer {
@@ -303,6 +319,10 @@ footer .company-title {
     font-size: 1.5rem;
   }
 
+  .legacy-description {
+    font-size: 1.2rem;
+  }
+
   footer p {
     font-size: 1.2rem;
   }
@@ -323,6 +343,14 @@ footer .company-title {
 
   .timeline-item h3 {
     font-size: 1.7rem;
+  }
+
+  .legacy h2 {
+    font-size: 1.9rem;
+  }
+
+  .legacy-description {
+    font-size: 1.4rem;
   }
 
   footer p {
@@ -347,6 +375,14 @@ footer .company-title {
     font-size: 1.8rem;
   }
 
+  .legacy h2 {
+    font-size: 2rem;
+  }
+
+  .legacy-description {
+    font-size: 1.5rem;
+  }
+
    footer p {
     font-size: 1.3rem;
   }
@@ -369,6 +405,10 @@ footer .company-title {
     font-size: 1.9rem;
   }
 
+  .legacy-description {
+    font-size: 1.7rem;
+  }
+
   footer p {
     font-size: 1.5rem;
   }
@@ -389,6 +429,14 @@ footer .company-title {
 
   .timeline-item h3 {
     font-size: 2.1rem;
+  }
+
+  .legacy h2 {
+    font-size: 2.3rem;
+  }
+
+  .legacy-description {
+    font-size: 1.9rem;
   }
 
   footer p {

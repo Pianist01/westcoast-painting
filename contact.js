@@ -14,9 +14,9 @@ function submitForm() {
     emailjs.sendForm('service_utp3liq', 'template_65p3vk9', form).then(() => {
       console.log('Success, message sent');
     }, (error) => {
-      console.log('Error, message not sent');
+      console.log('Error, message not sent', error);
     });
   });
 }
 
-submitForm();
+submitForm();   
