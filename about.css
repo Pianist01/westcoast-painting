@@ -187,6 +187,12 @@ main {
   padding: 15px;
 }
 
+.timeline-item .looking-ahead-description {
+  line-height: 1.45;
+  padding: 0;
+  text-align: left;
+}
+
 .active {
   animation: goUp 1s ease-in-out;
 }
@@ -254,6 +260,8 @@ main {
   flex-direction: column;
   align-items: center;
   height: 100svh;
+  width: 100%;
+  grid-row: 2;
 }
 
 .legacy-description {
@@ -262,8 +270,10 @@ main {
   text-align: center;
   justify-content: center;
   align-items: center;
-  line-height: 2;
-  width: 90%;
+  line-height: 1.4;
+  width: 330px;
+  font-size: 1rem;
+  height: 100%;
 }
 
 /* FOOTER */
@@ -307,6 +317,19 @@ footer .company-title {
 
 /* MEDIA QUERIES */
 
+@media (min-width: 414px) {
+  .legacy-description {
+    width: 400px;
+  }
+}
+
+@media (min-width: 650px) {
+  .legacy-description {
+    width: 100%;
+    padding: 15px;
+  }
+}
+
 @media (min-width: 1024px) {
   header a {
     font-size: 1.3rem;
@@ -321,7 +344,10 @@ footer .company-title {
   }
 
   .legacy-description {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
+    width: 100%;
+    padding: 15px;
+    line-height: 1.7;
   }
 
   footer p {
@@ -352,6 +378,11 @@ footer .company-title {
 
   .legacy-description {
     font-size: 1.4rem;
+    width: 100%;
+  }
+
+  .legacy-description p {
+    width: 100%;
   }
 
   footer p {

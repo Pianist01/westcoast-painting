@@ -20,3 +20,16 @@ function submitForm() {
 }
 
 submitForm();   
+
+function adminRecievesMessage() {
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    emailjs.sendForm('service_utp3liq', 'template_5eer8ha', form).then(() => {
+      console.log('Succeess, message recieved');
+    }, (error) => {
+      console.log('Error, message not recieved', error);
+    });
+  });
+}
+
+adminRecievesMessage();
